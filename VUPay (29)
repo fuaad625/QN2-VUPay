@@ -1,0 +1,51 @@
+
+
+import java.util.Scanner;
+public class VUCourses {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String moduleCode;
+        String courseName = "";
+        int tuition = 0;
+
+        System.out.println("===== Welcome to VUPay =====");
+        System.out.print("Enter Module Code: ");
+        moduleCode = input.nextLine();
+
+        switch(moduleCode.toUpperCase()) {
+
+            case "BSF" -> {
+                courseName = "BSc. Software Engineering";
+                tuition = 900000;
+            }
+
+            case "BIT" -> {
+                courseName = "BSc. Information Technology";
+                tuition = 750000;
+            }
+
+            case "BCS" -> {
+                courseName = "BSc. Computer Science";
+                tuition = 800000;
+            }
+
+            case "BCE" -> {
+                courseName = "BSc. Computer Engineering";
+                tuition = 950000;
+            }
+
+            default -> {
+                System.out.println("Wrong Module Code details");
+                return;
+            }
+        }
+
+        System.out.println("\nCourse Details:");
+        System.out.println("Course Name: " + courseName);
+        System.out.println("Module Code: " + moduleCode.toUpperCase());
+        System.out.println("Tuition Fees: UGX " + tuition);
+    }
+}
+    
+
